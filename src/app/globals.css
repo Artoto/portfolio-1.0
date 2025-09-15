@@ -1,26 +1,100 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Oswald", fantasy;
+  src: url("/fonts/Oswald/static/Oswald-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald", fantasy;
+  src: url("/fonts/Oswald/static/Oswald-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald", fantasy;
+  src: url("/fonts/Oswald/static/Oswald-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Oswald", fantasy;
+  src: url("/fonts/Oswald/static/Oswald-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --font-size-base: 20px;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+::-webkit-scrollbar {
+  display: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* สำหรับ Firefox */
+html {
+  scrollbar-width: none;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oswald", fantasy;
+  -ms-overflow-style: none; /* สำหรับ IE และ Edge รุ่นเก่า */
+  overflow-y: scroll; /* บังคับให้ยังเลื่อนแนวตั้งได้ */
+  font-size: var(--font-size-base);
+  cursor: url("/default.png") 16 16, auto;
+}
+
+span {
+  cursor: url("/default.png") 16 16, auto;
+}
+
+/* เวลา hover บนลิงก์หรือต้องการ pointer */
+a,
+button {
+  cursor: url("/pointer.png") 16 16, pointer;
+}
+
+.bg-background-light {
+  background-color: hsl(hsl(0 0% 19%));
+}
+
+@keyframes slide-up-and-fade {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-up-and-fade {
+  animation: slide-up-and-fade 0.4s ease-out forwards;
+}
+
+.animate-spin-slow {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img,
+video {
+  max-width: 100% !important;
+  height: auto !important;
+  border-radius: 16px !important;
 }
