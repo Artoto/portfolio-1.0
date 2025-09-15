@@ -14,7 +14,7 @@ const HeroSection: React.FC = () => {
         <button
           onClick={() => {
             const link = document.createElement("a");
-            link.href = "/vercel.svg"; // Make sure to place your PDF in the public folder
+            link.href = "/Resume.pdf"; // Make sure to place your PDF in the public folder
             link.download = "arthit-resume.pdf";
             link.click();
           }}
