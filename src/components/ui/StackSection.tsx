@@ -28,7 +28,7 @@ const SECTIONS: Section[] = [
     title: "BACKEND",
     items: [
       { label: "Node.js", icon: "/image/node.png" },
-      { label: "NestJS", icon: "/image/nest.svg" },
+      // { label: "NestJS", icon: "/image/nest.svg" },
       { label: "Express.js", icon: "/image/express.png" },
     ],
   },
@@ -38,7 +38,7 @@ const SECTIONS: Section[] = [
       { label: "MySQL", icon: "/image/mysql.svg" },
       { label: "PostgreSQL", icon: "/image/postgreSQL.webp" },
       { label: "MongoDB", icon: "/image/mongodb.svg" },
-      { label: "Prisma", icon: "/image/prisma.png" },
+      // { label: "Prisma", icon: "/image/prisma.png" },
     ],
   },
   {
@@ -46,7 +46,7 @@ const SECTIONS: Section[] = [
     items: [
       { label: "Git", icon: "/image/git.png" },
       { label: "Docker", icon: "/image/docker.svg" },
-      { label: "AWS", icon: "/image/aws.webp" },
+      // { label: "AWS", icon: "/image/aws.webp" },
     ],
   },
 ];
