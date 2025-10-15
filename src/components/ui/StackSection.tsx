@@ -28,7 +28,7 @@ const SECTIONS: Section[] = [
     title: "BACKEND",
     items: [
       { label: "Node.js", icon: "/image/node.png" },
-      // { label: "NestJS", icon: "/image/nest.svg" },
+      { label: "PHP", icon: "/image/php.png" },
       { label: "Express.js", icon: "/image/express.png" },
     ],
   },

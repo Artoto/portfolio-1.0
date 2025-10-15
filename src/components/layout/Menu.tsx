@@ -25,7 +25,7 @@ const socialItems: SocialItem[] = [
   {
     label: "GitHub",
     href: "https://github.com",
-    username: "github.com/yourname",
+    username: "github.com/Arthit",
   },
 ];
 
@@ -205,7 +205,7 @@ const MenuOverlay: React.FC<{
           </div>
 
           <motion.div
-            className="flex flex-col lg:flex-row h-full relative z-10"
+            className="flex flex-col lg:flex-row h-full relative z-10 overflow-auto"
             variants={contentVariants}
             initial="hidden"
             animate="visible"

@@ -59,7 +59,7 @@ export default function VideoPlayer({
 
   return (
     <div
-      className={`!h-full !w-full overflow-hidden rounded-xl ${className}`}
+      className={`w-auto h-[260px] md:!h-full md:!w-full overflow-hidden rounded-xl ${className}`}
       style={{ aspectRatio }}
     >
       <video
