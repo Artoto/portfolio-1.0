@@ -3,6 +3,7 @@
 import React, { useRef, useState } from "react";
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import VideoPlayer from "./VideoPlayer";
+import Swal from "sweetalert2";
 
 interface Project {
   title: string;
@@ -60,13 +61,21 @@ const ProjectCard: React.FC<{
     touchTimeout.current = window.setTimeout(() => setHovered(false), 900);
   }
 
+  const handleOnClick = () => {
+    if (p.href === "") {
+      Swal.fire({
+        title: "Sorry, can't open.",
+        text: "Since there is no deployment, the hosting is just a prototype.",
+        icon: "warning",
+        confirmButtonText: "confirm",
+      });
+      return;
+    }
+    window.open(p.href, "_blank");
+  };
+
   return (
-    <a
-      href={p.href}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="block"
-    >
+    <div onClick={handleOnClick} className="block">
       <div
         ref={containerRef}
         className={cx(
@@ -126,7 +135,7 @@ const ProjectCard: React.FC<{
           ))}
         </div>
       </div>
-    </a>
+    </div>
   );
 };
 

@@ -32,6 +32,15 @@ const projects = [
     playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc3",
     cover: "/video/character-generator.mp4",
   },
+  {
+    id: 4,
+    title: "ai-coach-system",
+    subtitle: "AI Coach System Web Apps.",
+    tags: ["Prototype", "NextJS", "ollama", "NodeJS", "Python"],
+    href: "",
+    playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc4",
+    cover: "/video/ai-coach-system.mp4",
+  },
 ];
 
 const ProjectSection: React.FC = () => {
