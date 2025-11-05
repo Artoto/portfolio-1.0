@@ -75,7 +75,7 @@ const Background: React.FC = () => {
   return (
     <>
       {/* Background container ที่ fixed เต็มหน้าจอ */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-10">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-50">
         <AnimatePresence mode="popLayout">
           {loading && (
             <div className="fixed inset-0 z-[6] flex">

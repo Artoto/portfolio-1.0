@@ -2,9 +2,8 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Image from "next/image";
-import { SunDim } from "lucide-react";
 
-type Item = { label: string; icon?: string };
+type Item = { label: string; icon?: string; level: string };
 
 type Section = { title: string; items: Item[] };
 
@@ -12,40 +11,60 @@ const SECTIONS: Section[] = [
   {
     title: "FRONTEND",
     items: [
-      { label: "JavaScript", icon: "/image/js.png" },
-      { label: "TypeScript", icon: "/image/ts.png" },
-      { label: "React", icon: "/image/react.png" },
-      { label: "Next.js", icon: "/image/next.webp" },
-      { label: "Redux", icon: "/image/redux.png" },
-      { label: "Tailwind CSS", icon: "/image/tailwind.png" },
-      { label: "GSAP", icon: "/image/gsap.png" },
-      { label: "Framer Motion", icon: "/image/framer-motion.webp" },
-      { label: "Sass", icon: "/image/sass.webp" },
-      { label: "Bootstrap", icon: "/image/bootstrap.svg" },
+      { level: "Intermediate", label: "JavaScript", icon: "/image/js.png" },
+      { level: "Intermediate", label: "TypeScript", icon: "/image/ts.png" },
+      { level: "Intermediate", label: "React", icon: "/image/react.png" },
+      { level: "Intermediate", label: "Next.js", icon: "/image/next.webp" },
+      { level: "beginner", label: "Redux", icon: "/image/redux.png" },
+      {
+        level: "Intermediate",
+        label: "Tailwind CSS",
+        icon: "/image/tailwind.png",
+      },
+      { level: "Intermediate", label: "GSAP", icon: "/image/gsap.png" },
+      {
+        level: "beginner",
+        label: "Framer Motion",
+        icon: "/image/framer-motion.webp",
+      },
+      { level: "Intermediate", label: "Sass", icon: "/image/sass.webp" },
+      {
+        level: "Intermediate",
+        label: "Bootstrap",
+        icon: "/image/bootstrap.svg",
+      },
     ],
   },
   {
     title: "BACKEND",
     items: [
-      { label: "Node.js", icon: "/image/node.png" },
-      { label: "PHP", icon: "/image/php.png" },
-      { label: "Express.js", icon: "/image/express.png" },
+      { level: "Intermediate", label: "Node.js", icon: "/image/node.png" },
+      { level: "Intermediate", label: "PHP", icon: "/image/php.png" },
+      {
+        level: "Intermediate",
+        label: "Express.js",
+        icon: "/image/express.png",
+      },
     ],
   },
   {
     title: "DATABASE",
     items: [
-      { label: "MySQL", icon: "/image/mysql.svg" },
-      { label: "PostgreSQL", icon: "/image/postgreSQL.webp" },
-      { label: "MongoDB", icon: "/image/mongodb.svg" },
-      // { label: "Prisma", icon: "/image/prisma.png" },
+      { level: "Expert", label: "MySQL", icon: "/image/mysql.svg" },
+      {
+        level: "Intermediate",
+        label: "PostgreSQL",
+        icon: "/image/postgreSQL.webp",
+      },
+      { level: "Intermediate", label: "MongoDB", icon: "/image/mongodb.svg" },
+      // { level: "",label: "Prisma", icon: "/image/prisma.png" },
     ],
   },
   {
     title: "TOOLS",
     items: [
-      { label: "Git", icon: "/image/git.png" },
-      { label: "Docker", icon: "/image/docker.svg" },
+      { level: "Intermediate", label: "Git", icon: "/image/git.png" },
+      { level: "Intermediate", label: "Docker", icon: "/image/docker.svg" },
       // { label: "AWS", icon: "/image/aws.webp" },
     ],
   },
@@ -149,17 +168,36 @@ const TechStackSection: React.FC = () => {
                     variants={getVariants()}
                     animate={getAnimateState()}
                     custom={0.3 + idx * 0.1}
-                    className="flex items-center gap-2 hover:shadow md:hover:scale-[1.02] transition"
+                    className=""
                   >
-                    <Image
-                      src={it.icon || ""}
-                      alt={it.label}
-                      width={40}
-                      height={40}
-                      objectFit="contain"
-                      className="h-10"
-                    />
-                    <span className="text-2xl md:text-3xl">{it.label}</span>
+                    <div className="dropdown dropdown-hover dropdown-top ">
+                      <div
+                        tabIndex={0}
+                        className="flex items-center gap-2 hover:shadow md:hover:scale-[1.02] transition"
+                      >
+                        <Image
+                          src={it.icon || ""}
+                          alt={it.label}
+                          width={40}
+                          height={40}
+                          objectFit="contain"
+                          className="!h-10"
+                        />
+                        <span className="text-2xl md:text-3xl">{it.label}</span>
+                      </div>
+
+                      <div
+                        tabIndex={0}
+                        className="dropdown-content z-[1] card card-compact w-52 shadow bg-transparent backdrop-saturate-100 backdrop-blur-2xl border border-white"
+                      >
+                        <div className="card-body">
+                          <h3 className="card-title text-green-400">
+                            {`D:/Proficiency level>`}
+                          </h3>
+                          <p className="text-lg text-green-400">{`D:/${it?.level}>`}</p>
+                        </div>
+                      </div>
+                    </div>
                   </motion.div>
                 ))}
               </motion.div>

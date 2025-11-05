@@ -18,7 +18,7 @@ const projects = [
     id: 2,
     title: "Animation Guide",
     subtitle: "Animation Guide Web Apps.",
-    tags: ["Development", "2025"],
+    tags: ["NestJS", "Development", "2025"],
     href: "https://animation-guide-wheat.vercel.app/",
     playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc2",
     cover: "/video/animation-guide.mp4",
@@ -27,7 +27,7 @@ const projects = [
     id: 3,
     title: "Character Generator",
     subtitle: "Character Generator Web Apps.",
-    tags: ["Development", "2025"],
+    tags: ["NestJS", "API Google"],
     href: "https://character-generator-zeta.vercel.app/",
     playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc3",
     cover: "/video/character-generator.mp4",
@@ -46,10 +46,10 @@ const projects = [
     title: "Git Action CI/CD",
     subtitle:
       "Git Action CI/CD website and API, build docker image to docker hub and depoly to AWS-Cloud",
-    tags: ["ReactJS", "NodeJS", "daisyui", "AWS-Cloud", "Dockern"],
+    tags: ["ReactJS", "NodeJS", "daisyui", "AWS", "Dockern"],
     href: "",
     playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc5",
-    cover: "/video/ai-coach-system.mp4",
+    cover: "/video/react-to-CI-CD-.mp4",
   },
 ];
 

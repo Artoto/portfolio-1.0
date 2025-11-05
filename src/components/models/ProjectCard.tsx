@@ -122,12 +122,12 @@ const ProjectCard: React.FC<{
 
       <div className="flex flex-col justify-between lg:flex-row">
         <div className="flex flex-col ">
-          <span className="font-mono  font-medium">{p.subtitle}</span>
           <div className="w-fit font-semibold ">
             <h3 className="font-mono">{p.title}</h3>
           </div>
+          <span className="font-mono  font-medium">{p.subtitle}</span>
         </div>
-        <div className="flex items-end gap-3 tracking-base">
+        <div className="flex items-start gap-3 tracking-base">
           {p.tags.map((t, i) => (
             <span key={i} className={cx("tag")}>
               {t}
