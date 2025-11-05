@@ -41,6 +41,16 @@ const projects = [
     playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc4",
     cover: "/video/ai-coach-system.mp4",
   },
+  {
+    id: 5,
+    title: "Git Action CI/CD",
+    subtitle:
+      "Git Action CI/CD website and API, build docker image to docker hub and depoly to AWS-Cloud",
+    tags: ["ReactJS", "NodeJS", "daisyui", "AWS-Cloud", "Dockern"],
+    href: "",
+    playbackId: "QpLBMxnNQMQHXri9nqPfg1nZLyJn5kg01vXlmX1auvEc5",
+    cover: "/video/ai-coach-system.mp4",
+  },
 ];
 
 const ProjectSection: React.FC = () => {
@@ -85,8 +95,8 @@ const ProjectSection: React.FC = () => {
                 (PROJECTS)
               </span>
               <p className="w-full max-w-[35ch] text-balance text-2xl font-medium">
-                Thoughtfully crafted digital experiences that blend utility and
-                aesthetics into something functional, memorable, and refined.
+                {`Thoughtfully crafted digital experiences that blend utility and
+                aesthetics into something functional, memorable, and refined.`}
               </p>
             </div>
           </div>
