@@ -65,7 +65,7 @@ const SECTIONS: Section[] = [
     items: [
       { level: "Intermediate", label: "Git", icon: "/image/git.png" },
       { level: "Intermediate", label: "Docker", icon: "/image/docker.svg" },
-      // { label: "AWS", icon: "/image/aws.webp" },
+      { level: "Intermediate", label: "Kontent.ai", icon: "/image/kontentai.png" },
     ],
   },
 ];

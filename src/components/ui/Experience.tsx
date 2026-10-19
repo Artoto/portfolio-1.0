@@ -12,6 +12,16 @@ interface ExperienceItem {
 
 const experienceData: ExperienceItem[] = [
   {
+    id: "sugar",
+    company: "THIP SUGAR SUKHOTHAI COMPANY LIMITED",
+    position: "Apprentice",
+    duration: "Nov 2020 - Mar 2021",
+    details: [
+      "An IT support and have designed a website for a cooperative education program.",
+      "Optimized application performance and improved user experience",
+    ],
+  },  
+  {
     id: "ibusiness",
     company: "Ibusiness Corporation",
     position: "Programmer",
@@ -25,13 +35,16 @@ const experienceData: ExperienceItem[] = [
     ],
   },
   {
-    id: "sugar",
-    company: "THIP SUGAR SUKHOTHAI COMPANY LIMITED",
-    position: "Apprentice",
-    duration: "Nov 2020 - Mar 2021",
+    id: "bumrungrad",
+    company: "Bumrungrad International Hospital",
+    position: "Software Developer",
+    duration: "Doc 2025 - Doc 2026",
     details: [
-      "An IT support and have designed a website for a cooperative education program.",
-      "Optimized application performance and improved user experience",
+      "Develop the e-commerce system and the hospital’s beauty and health-related article pages using Next.js and Tailwind CSS",
+      "Develop the API for updating data to Algolia using Node.js",
+      "Participated in code reviews and maintained coding standards",
+      "Develop the API to sync doctor schedules to Kontent.ai using C#",
+      "Manage content on the Kontent.ai CMS platform",
     ],
   },
 ];
